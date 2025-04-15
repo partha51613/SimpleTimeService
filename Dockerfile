@@ -1,6 +1,12 @@
 # Use a minimal Node.js image
 FROM node:18-alpine
 
+# Install tzdata for timezone configuration
+RUN apk add --no-cache tzdata
+
+# Set the timezone to IST (Asia/Kolkata)
+ENV TZ=Asia/Kolkata
+
 # Create and set working directory
 WORKDIR /app
 
