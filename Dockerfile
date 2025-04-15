@@ -21,7 +21,7 @@ RUN addgroup -S appgroup && adduser -S appuser -G appgroup \
 USER appuser
 
 # Expose the port your app runs on
-EXPOSE 3000
+EXPOSE 3001
 
 # Run the app
 CMD ["node", "index.js"]
