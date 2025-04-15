@@ -1,5 +1,5 @@
 {
-  "name": "assessment_1",
+  "name": "SimpleTimeService",
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
