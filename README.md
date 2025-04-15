@@ -39,9 +39,25 @@ The preferred way to run **SimpleTimeService** is by using Docker Compose. You m
 Ensure you have the following dependencies installed before running the service:
 
 - Docker (version 19.03 or higher)
-- Docker Compose (version 1.27.0 or higher)
+- Docker Compose (version 1.27.0 or higher) (_Only if you want to run it via Method 2_)
 
 ### Steps to Run
+
+## Using Docker (Method 1)
+
+1. Pull the docker image and run it using the commands
+```
+docker pull partha51613/simple-time-service:latest
+docker run -dp 3001:3001 --name simple-time-service partha51613/simple-time-service
+```
+
+2. The application can be accessed on the following ip (if run using docker-compose)
+
+```
+http://localhost:3001
+```
+
+## Using Docker Compose (Method 2 [_Preferred_] )
 
 1. Clone the repository:
 
