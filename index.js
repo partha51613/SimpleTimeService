@@ -16,13 +16,17 @@ const server = http.createServer(async (req, res) => {
   // Time Format
 
   const now = new Date();
+
+  // Format date: DD/MM/YYYY
   const date = `${now.getDate().toString().padStart(2, '0')}/${
     (now.getMonth() + 1).toString().padStart(2, '0')}/${now.getFullYear()}`;
+  
+  // Format time: HH:MM:SS AM/PM
   let hours = now.getHours();
   const minutes = now.getMinutes().toString().padStart(2, '0');
   const seconds = now.getSeconds().toString().padStart(2, '0');
   const ampm = hours >= 12 ? 'PM' : 'AM';
-  hours = hours % 12 || 12; // Convert 0 to 12 for 12 AM
+  hours = hours % 12 || 12;
   const time = `${hours.toString().padStart(2, '0')}:${minutes}:${seconds} ${ampm}`;
 
   const timestamp = `${date} ${time}`;
@@ -43,7 +47,7 @@ const server = http.createServer(async (req, res) => {
   }
 });
 
-const PORT = 3001;
+const PORT = 3002;
 server.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
 });
