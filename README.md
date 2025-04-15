@@ -1,8 +1,8 @@
 # SimpleTimeService
 
-**SimpleTimeService** is a lightweight service that displays the current timestamp and the IPv4 address of the system. The output is presented in the following format:
+**SimpleTimeService** is a lightweight service that displays the current timestamp and the public IPv4 address of the host machine. The output is presented in the following format:
 
-```
+```json
 {
     "timestamp": "15/04/2025 06:29:48 AM",  
     "ip": "49.37.100.55"  
@@ -32,7 +32,7 @@ https://github.com/partha51613/SimpleTimeService
 
 ## Running with Docker Compose
 
-The preferred way to run **SimpleTimeService** is by using Docker Compose. You can also run the container using **docker run**
+The preferred way to run **SimpleTimeService** is by using Docker Compose. You may also run the container manually using **docker run** instead of compose
 
 ### Prerequisites
 
@@ -44,9 +44,10 @@ Ensure you have the following dependencies installed before running the service:
 ### Steps to Run
 
 1. Clone the repository:
+
 ```
-   git clone https://github.com/partha51613/SimpleTimeService.git
-   cd SimpleTimeService
+git clone https://github.com/partha51613/SimpleTimeService.git
+cd SimpleTimeService
 ```
 
 2. Build and start the container using Docker Compose:
@@ -55,20 +56,23 @@ Ensure you have the following dependencies installed before running the service:
    docker-compose up -d
 ```
 
+
    This command will:
    - Build the Docker image (if not already built).
    - Start the container in detached mode.
 
 
-## Access the Application
-The application can be accessed on the following ip if run using docker-compose
+3. Access the Application
+
+The application can be accessed on the following ip (if run using docker-compose)
+
 
 ```
-http://localhost:3000
+http://localhost:3001
 ```
 
 
-## Stopping the Service
+4. Stopping the Service
 
 To stop and remove the container, use the following command:
 
