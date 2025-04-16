@@ -5,7 +5,7 @@ FROM node:18-alpine
 RUN apk add --no-cache tzdata
 
 # Set the timezone to IST (Asia/Kolkata)
-ENV TZ=Asia/Kolkata
+ENV TZ=Asia/Kolkata #Setting this here as I want the container to run in IST hours. This can be changed to appropriate timezone as required.
 
 # Create and set working directory
 WORKDIR /app
